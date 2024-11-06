@@ -516,14 +516,14 @@
           // Loop through each product in the metadata array
           data.metadata.forEach((product) => {
             const row = document.createElement("tr");
-            row.innerHTML = `
+            row.innerHTML = `        
               <th scope="row">
-                <a href="#"><img src="${product.product_thumb}" alt="${product.product_name}" style="width: 50px; height: 50px;"></a>
+                <a href="pages-detail.html?id=${product._id}"><img src="${product.product_thumb}" alt="${product.product_name}" style="width: 50px; height: 50px;"></a>
               </th>
               <td>
-                <a href="product-detail.html?id=${product.id}" class="text-primary fw-bold">${product.product_name}</a>
+                <a href="pages-detail.html?id=${product._id}" class="text-primary fw-bold">${product.product_name}</a>
               </td>
-              <td>${product.product_description}</td>
+              <td>${product.product_description}</td>           
             `;
             tableBody.appendChild(row);
           });
